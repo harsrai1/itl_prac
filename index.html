@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Information</title>
+</head>
+<body>
+  <h2>Enter Your Details</h2>
+  <p>Updated main branch version of the file.</p>
+<p>Updated main branch version of the file.</p>
+  <form onsubmit="showInfo(event)">
+    <label>Name:</label><br>
+    <input type="text" id="name" required><br><br>
+
+    <label>College:</label><br>
+    <input type="text" id="college" required><br><br>
+
+    <label>Department:</label><br>
+    <input type="text" id="department" required><br><br>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <h3 id="output"></h3>
+
+  <script>
+    function showInfo(event) {
+      event.preventDefault();
+      const name = document.getElementById("name").value;
+      const college = document.getElementById("college").value;
+      const dept = document.getElementById("department").value;
+      document.getElementById("output").innerText =
+        `Name: ${name} | College: ${college} | Department: ${dept}`;
+    }
+  </script>
+</body>
+</html>
